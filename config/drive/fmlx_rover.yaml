@@ -1,0 +1,27 @@
+model : "omni"
+
+body:
+  width : 106.2
+  length: 186.0
+  height: 105.0
+
+axle_length:
+  d0 : 81.18
+  d1 : 81.13
+  d2 : 74.33
+
+axle_angle:
+  # Angle from X-Axis to Wheel Axle
+  b0 : 119.72
+  b1 : 293.78
+  b2 : 63.88
+
+wheel_angle:
+  # Angle from l
+  y0 : 60.28
+  y1 : 6.22
+  y2 : 3.88
+
+wheel:
+  rw : 17.5
+  width : 18.796

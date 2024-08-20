@@ -1,0 +1,11 @@
+screen:
+  width : 1280
+  height: 720
+
+wheel_view:
+  scale        : 300
+  quiver_length: 5
+
+world_view:
+  scale        : 100
+  quiver_length: 5

@@ -1,0 +1,10 @@
+model : "diff"
+
+body:
+  width : 106.2
+  length: 186.0
+  height: 105.0
+
+kinematics:
+  d : 20
+  wr : 17.5
