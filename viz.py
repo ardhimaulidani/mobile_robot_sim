@@ -84,8 +84,8 @@ def parse_csv():
 
     for k in range(1,len(result)):
         # Append GFC array
-        pose.append([np.float64(result[k,0]), np.float64(result[k,1]), np.float64(result[k,4])])
-        vel.append([np.float64(result[k,2]), np.float64(result[k,3]), np.float64(result[k,5])])
+        pose.append([np.float64(result[k,0]), np.float64(result[k,1]), np.radians(np.float64(result[k,4]))])
+        vel.append([np.float64(result[k,2]), np.float64(result[k,3]), np.radians(np.float64(result[k,5]))])
             
     # Convert to NumPy
     pose = np.array(pose)
@@ -96,6 +96,7 @@ def parse_csv():
 # Open YAML Config File
 current_dir = dirname(__file__)
 file_path = join(current_dir, "config\\drive\\fmlx_rover.yaml")
+
 with open(file_path, 'r') as file:
     robot = yaml.safe_load(file)
     
@@ -155,7 +156,7 @@ animationState = True
 traj = parse_csv()
 
 # Normalize to Quadrant I
-traj = np.array([0, heightScreen, 0]) - traj
+# traj = np.array([0, heightScreen, 0]) - traj
 
 
 # set ticks
